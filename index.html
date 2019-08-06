@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://www.albee.me/index3.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Our Love Story</title>
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('./Digital-7Mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="./default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="./jquery.js"></script><style type="text/css" abt="234"></style>
+	<script type="text/javascript" src="./garden.js"></script>
+  <script type="text/javascript" src="./functions.js"></script>
+</head>
+<body>
+	<div id="mainDiv">
+		<div id="content" style="width: 1110px; height: 625px; margin-top: 27.5px; margin-left: 83px;">
+			<div id="code" style="margin-top: 100px;">
+				<span class="comments">七夕快乐</span><br>
+				<span class="space comments">窗外的麻雀 在电线杆上多嘴</span><br>
+				<span class="space comments">你说这一句 很有夏天的感觉<br>
+				<span class="space comments">手中的铅笔 在纸上来来回回<br>
+				<span class="space comments">我用几行字形容你是我的谁<br>
+				<span class="space comments">秋刀鱼 的滋味 猫跟你都想了解<br>
+				<span class="space comments">初恋的香味就这样被我们寻回<br>
+				<span class="space comments">那温暖 的阳光 像刚摘的鲜艳草莓<br>
+				<span class="space comments">你说你舍不得吃掉这一种感觉<br>
+				<span class="space comments">雨下整夜 我的爱溢出就像雨水<br>
+				<span class="space comments">院子落叶 跟我的思念厚厚一叠<br>
+				<span class="space comments">几句是非 也无法将我的热情冷却<br>
+				<span class="space comments">你出现在我诗的每一页<br>
+				<span class="space comments">雨下整夜 我的爱溢出就像雨水<br>
+				<span class="space comments">窗台蝴蝶 像诗里纷飞的美丽章节<br>
+				<span class="space comments">我接着写 把永远爱你写进诗的结尾<br>
+				<span class="space comments">你是我唯一想要的了解<br>
+				<span class="space comments">那饱满 的稻穗 幸福了这个季节<br>
+				<span class="space comments">而你的脸颊像田里熟透的蕃茄<br>
+				<span class="space comments">你突然 对我说 七里香的名字很美<br>
+				<span class="space comments">我此刻却只想亲吻你倔强的嘴<br>
+				<span class="space comments" style="margin-left: 100px;">mua~<br>
+				<!-- <span class="space comments">我此刻却只想亲吻你倔强的嘴<br>m u a ~</span> <br> -->
+				<br>
+			</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>_</div>
+			<div id="loveHeart">
+				<canvas id="garden" width="670" height="625"></canvas>
+				<div id="words" style="position: absolute; top: 222.5px; left: 593px;">
+					<div id="messages" style="display: block;">
+						我爱你！
+						<div id="elapseClock"><span class="digit">181</span> days <span class="digit">16</span> hours <span class="digit">53</span> minutes <span class="digit">23</span> seconds</div>
+					</div>
+					<div id="loveu" style="display: block;">
+						Love u forever and ever.<br>
+						<div class="signature"> - Hykes</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<audio src="./qlx.mp3" id="music" autoplay="autoplay"></audio>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2012, 4, 1);
+		together.setHours(20);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
